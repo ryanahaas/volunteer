@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Volunteer resume of Ryan A. Haas — youth worker, community organizer, and Ph.D. candidate in Anthropology at the University of Texas at Austin.">
-<title>Ryan A. Haas</title>
+<meta name="description" content="Volunteer background of Ryan A. Haas — youth worker and educator with twelve years in afterschool programs, elementary schools, and community organizations.">
+<title>Ryan A. Haas — Volunteer Background</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
@@ -73,8 +73,8 @@
     text-align: center;
   }
   .kicker {
-    margin: 0 0 0.9rem;
-    font-size: 0.75rem;
+    margin: 1rem 0 0;
+    font-size: 0.8rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-soft);
@@ -90,8 +90,9 @@
     text-wrap: balance;
   }
   .contact {
-    margin: 1rem 0 0;
-    padding: 0;
+    margin: 1.4rem 0 0;
+    padding: 1.1rem 0 0;
+    position: relative;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -99,6 +100,13 @@
     gap: 0.35rem 1.5rem;
     font-size: 0.95rem;
     color: var(--ink-soft);
+  }
+  .contact::before {
+    content: "";
+    position: absolute; top: 0; left: 50%;
+    width: 3rem; height: 1px;
+    background: var(--rule);
+    transform: translateX(-50%);
   }
   .contact a { color: var(--ink); border-bottom-color: var(--rule); }
 
@@ -131,6 +139,7 @@
   }
   .note p + p { margin-top: 1.1em; }
   .note em { font-style: italic; color: var(--accent); }
+
 
   /* entries */
   .entry {
@@ -172,20 +181,6 @@
   .entry li { margin: 0.28rem 0; }
   .entry li::marker { color: var(--accent-soft); }
 
-  /* courses */
-  .courses { margin: 0.7rem 0 0; padding: 0; list-style: none; max-width: 78ch; }
-  .courses li {
-    display: grid;
-    grid-template-columns: 5.5rem 1fr auto;
-    gap: 0 0.9rem;
-    padding: 0.32rem 0;
-    border-top: 1px dotted var(--rule);
-    font-size: 0.97rem;
-  }
-  .courses li:first-child { border-top: 0; }
-  .courses .code { color: var(--accent); font-weight: 600; font-size: 0.86rem; letter-spacing: 0.02em; padding-top: 0.12rem; }
-  .courses .term { color: var(--ink-faint); font-size: 0.9rem; white-space: nowrap; padding-top: 0.08rem; }
-
   /* two-column lists */
   .twocol {
     display: grid;
@@ -222,64 +217,109 @@
     .page { padding-top: 2.25rem; }
     .masthead { text-align: left; }
     .contact { justify-content: flex-start; }
+    .contact::before { left: 0; transform: none; }
     .twocol { grid-template-columns: 1fr; }
     .twocol ul + ul li:first-child { border-top: 1px dotted var(--rule); }
-    .courses li { grid-template-columns: 4.6rem 1fr; }
-    .courses .term { grid-column: 2; padding-top: 0; }
   }
   @media (prefers-reduced-motion: no-preference) {
     a { transition: border-color 160ms ease; }
   }
+
+  /* ---------- print ---------- */
+  @media print {
+    :root {
+      --paper: #FFFFFF;
+      --paper-deep: #FFFFFF;
+      --ink: #111111;
+      --ink-soft: #444444;
+      --ink-faint: #777777;
+      --rule: #CCCCCC;
+      --accent: #1F3A5F;
+      --accent-soft: #4A6890;
+    }
+    @page { margin: 0.6in; }
+    body { font-size: 10pt; line-height: 1.35; }
+    .page { max-width: none; padding: 0; }
+    .contact { margin-top: 0.5rem; }
+    section { padding: 1rem 0 0.25rem; break-inside: auto; }
+    section h2 { font-size: 12.5pt; margin-bottom: 0.6rem; break-after: avoid; }
+    .note p { font-size: 10.5pt; }
+    .entry { padding: 0.6rem 0; }
+    .entry h3 { font-size: 11.5pt; }
+    .entry h3 .org { font-size: 10.5pt; }
+    .entry ul { margin-top: 0.3rem; }
+    .entry li { margin: 0.12rem 0; }
+    .twocol li { padding: 0.2rem 0 0.2rem 0.9rem; }
+    .entry, .twocol li { break-inside: avoid; }
+    .masthead h1 { font-size: 26pt; }
+    a { color: inherit; border-bottom: 0; }
+    footer { display: none; }
+  }
 </style>
-
-
 </head>
 <body>
 <main class="page">
   <header class="masthead">
-    <p class="kicker">Volunteer resume</p>
     <h1>Ryan A. Haas</h1>
+    <p class="kicker">Volunteer background</p>
     <ul class="contact">
       <li>Los Angeles, CA</li>
       <li><a href="tel:+17147669602">(714) 766-9602</a></li>
-      <li><a href="mailto:RyanHaas@utexas.edu">RyanHaas@utexas.edu</a></li>
+      <li><a href="mailto:ryanahaas@gmail.com">ryanahaas@gmail.com</a></li>
     </ul>
   </header>
 
   <section class="note" aria-labelledby="about-h">
     <h2 id="about-h">About Me</h2>
-    <p>I am a youth worker, community organizer, graduate student and writer with twelve years of experience working and volunteering in schools, universities, afterschool programs, and community organizations.</p>
-    <p>I volunteer because I believe more caring cities get built in small, ordinary ways — by showing up, being useful, and letting a community shape me as much as I hope to contribute to it. I initiate volunteer relationships by listening, learning how a program and community works, and contributing to what's already underway. <em>I move at the speed of trust,</em> letting relationships, capacity, and mutual understanding shape what I offer and when.</p>
+    <p>I am a youth worker and educator with twelve years of experience working and volunteering in afterschool programs, elementary schools, universities, and community organizations. Much of that time has been with K-6 kids: tutoring, homework help, running afterschool sites, and getting new program sites enrolled and up and running.</p>
+    <p>I volunteer because I believe more caring cities get built in small, ordinary ways — by showing up, being useful, and letting a community shape me as much as I hope to contribute to it. I start by listening and learning how a program already works, and I contribute to what's underway before suggesting anything new. <em>I move at the speed of trust,</em> letting relationships, capacity, and mutual understanding shape what I offer and when.</p>
+  </section>
+
+
+  <section aria-labelledby="train-h">
+    <h2 id="train-h">Trainings and Certifications</h2>
+    <div class="twocol">
+      <ul>
+      <li>Live Scan and DOJ Fingerprint Clearance</li>
+      <li>Child Abuse and Mandated Reporter <span class="via">(MandatedReporterCA)</span></li>
+      <li>Child Abuse Risk Management <span class="via">(Praesidium)</span></li>
+      <li>CPR/AED and First Aid, Child &amp; Adult <span class="via">(American Red Cross)</span></li>
+      </ul>
+      <ul>
+      <li>De-escalation and Crisis Intervention</li>
+      <li>Positive Behavioral Interventions and Supports (PBIS)</li>
+      <li>Trauma-Informed Care</li>
+      <li>Restorative Justice</li>
+      </ul>
+    </div>
   </section>
 
   <section aria-labelledby="edu-h">
     <h2 id="edu-h">Education</h2>
 
     <div class="entry">
-      <h3><span class="title">Ph.D. Candidate, Anthropology</span><span class="org">University of Texas at Austin</span></h3>
-      <p class="sub">Areas of expertise: Children &amp; Youth; Gentrification; Housing and Homelessness; Education</p>
-      <p class="meta">Fall 2022 – Fall 2029 (expected)</p>
+      <h3><span class="title">M.S.Ed., Teaching, Learning and Leadership</span><span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
+      <p class="meta">2018</p>
     </div>
     <div class="entry">
-      <h3><span class="title">M.S.Ed.</span><span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
-      <p class="sub">Master of Science in Education: Teaching, Learning and Leadership</p>
-      <p class="meta">Fall 2018</p>
+      <h3><span class="title">Ph.D. Candidate, Anthropology</span><span class="org">University of Texas at Austin</span></h3>
+      <p class="meta">2022 – present</p>
     </div>
     <div class="entry">
       <h3><span class="title">B.A., Comparative Storytelling: Theory and Praxis</span><span class="org">The Colorado College</span></h3>
-      <p class="meta">Spring 2013</p>
+      <p class="meta">2013</p>
     </div>
   </section>
 
   <section aria-labelledby="exp-h">
-    <h2 id="exp-h">Select K-12 Teaching &amp; Volunteer Experience</h2>
+    <h2 id="exp-h">Youth Work and Teaching Experience</h2>
 
     <div class="entry">
-      <h3><span class="title">Volunteer</span><span class="org">VICTORY Tutoring</span></h3>
+      <h3><span class="title">Volunteer Tutor</span><span class="org">VICTORY Tutoring</span></h3>
       <p class="meta">March 2023 – May 2026<span class="sep">·</span>Austin, Texas</p>
       <ul>
-        <li>Tutored students one-on-one for two full academic terms</li>
-        <li>At the director's request, conducted a comprehensive program evaluation, authored a findings report, and advised the program director on program development and goals</li>
+        <li>Tutored students one-on-one across two full academic terms</li>
+        <li>At the director's request, conducted a program evaluation, wrote a findings report, and advised on program development and goals</li>
       </ul>
     </div>
 
@@ -287,8 +327,8 @@
       <h3><span class="title">Volunteer</span><span class="org">Skid Row Learning Center (School on Wheels)</span></h3>
       <p class="meta">August 2022 – May 2023<span class="sep">·</span>Los Angeles, CA</p>
       <ul>
-        <li>Supported the re-establishment and enrollment of an afterschool program site for recently immigrated and unhoused youth</li>
-        <li>Tutored and facilitated learning activities with K-8 youth</li>
+        <li>Helped re-establish and enroll an afterschool program site for recently immigrated and unhoused K-8 youth</li>
+        <li>Tutored and led learning activities with K-8 students</li>
       </ul>
     </div>
 
@@ -296,17 +336,17 @@
       <h3><span class="title">Afterschool Site Manager</span><span class="org">Sunrise of Philadelphia</span></h3>
       <p class="meta">August 2021 – May 2022<span class="sep">·</span>Philadelphia, PA</p>
       <ul>
-        <li>Oversaw the establishment and enrollment of a school-based afterschool program serving 90 K-6 students</li>
-        <li>Hired, trained, and managed a team of 7 direct-service staff</li>
+        <li>Set up and enrolled a school-based afterschool program serving 90 K-6 students</li>
+        <li>Hired, trained, and supervised a team of 7 direct-service staff</li>
       </ul>
     </div>
 
     <div class="entry">
-      <h3><span class="title">Founding Volunteer &amp; Researcher</span><span class="org">Mighty Writers West Philadelphia</span></h3>
+      <h3><span class="title">Founding Volunteer</span><span class="org">Mighty Writers West Philadelphia</span></h3>
       <p class="meta">January 2019 – January 2020<span class="sep">·</span>Mantua, Philadelphia, PA</p>
       <ul>
-        <li>Built relationships with youth and families in Mantua Square Public Housing Complex</li>
-        <li>Supported staff in program development, tutored youth, and counseled parents</li>
+        <li>Helped open a new site: built relationships with youth and families in the Mantua Square public housing complex</li>
+        <li>Tutored youth, supported staff with program development, and worked closely with parents</li>
       </ul>
     </div>
 
@@ -314,10 +354,9 @@
       <h3><span class="title">Student Learning and Support Coordinator</span><span class="org">Leonard R. Flynn Elementary School</span></h3>
       <p class="meta">August 2016 – May 2017<span class="sep">·</span>San Francisco Unified School District</p>
       <ul>
-        <li>Devised individualized academic, social, and emotional support for a caseload of elementary-aged students</li>
-        <li>Counseled students one-on-one in resilience strategies to respond to administrators and advocate for their needs</li>
-        <li>Worked with a caseload of 5 students, spending the full day alongside them — companionship and support through class, lunch, recess, tutoring, and breaks</li>
-        <li>Coached teachers and coordinated practices between class, after-school, administration, and wrap-around services</li>
+        <li>Provided individualized academic, social, and emotional support for a caseload of 5 elementary students, staying alongside them through class, lunch, recess, tutoring, and breaks</li>
+        <li>Coached students one-on-one in self-advocacy and resilience</li>
+        <li>Coordinated support between classroom teachers, afterschool staff, administration, and wrap-around services</li>
       </ul>
     </div>
 
@@ -325,10 +364,10 @@
       <h3><span class="title">On-site Afterschool Programs Associate</span><span class="org">826 Valencia</span></h3>
       <p class="meta">January 2014 – January 2019<span class="sep">·</span>San Francisco, CA<span class="sep">·</span>Volunteer 3 years, Associate 1.5 years</p>
       <ul>
-        <li>Designed and facilitated support, relationships, and activities for students, focused on reflection and holistic, peer-driven, relational learning</li>
         <li>Co-led afterschool programming for 80 students; designed an intensive support program for 12 students</li>
-        <li>Connected students with a cohort of peers experiencing similar struggles, built relationships with parents, and identified outside resources and extracurricular opportunities</li>
-        <li>Developed systems to track students' learning choices, mindset, and social-emotional growth</li>
+        <li>Planned and led activities built around reflection, peer support, and relationships</li>
+        <li>Built relationships with parents, connected students with peers facing similar struggles, and identified outside resources and extracurricular opportunities</li>
+        <li>Set up simple systems to track students' progress, mindset, and social-emotional growth</li>
       </ul>
     </div>
 
@@ -336,86 +375,58 @@
       <h3><span class="title">College Counselor</span><span class="org">Every Student Matters</span></h3>
       <p class="meta">November 2013 – June 2015; August 2021 – present<span class="sep">·</span>San Francisco, CA</p>
       <ul>
-        <li>Coached ten students annually through the six-month application process — deadlines, essays, and school selection</li>
-        <li>Provided students with systems to track their progress toward college, set goals, and meet deadlines</li>
-        <li>Built relationships through one-on-one tutoring to identify best fits and scholarship opportunities</li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="uni-h">
-    <h2 id="uni-h">University Teaching Experience</h2>
-
-    <div class="entry">
-      <h3><span class="title">Assistant Instructor</span><span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
-      <p class="meta">Fall 2019</p>
-      <ul class="courses">
-        <li><span class="code">EDUC 545</span><span>Activism Beyond the Classroom</span><span class="term">Fall 2019</span></li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3><span class="title">Teaching Assistant</span><span class="org">University of Texas at Austin</span></h3>
-      <p class="meta">Fall 2022 – Spring 2026</p>
-      <ul class="courses">
-        <li><span class="code">LA 325</span><span>Undergraduate Research Apprenticeship Program — Cohort Seminar</span><span class="term">Spring 2026</span></li>
-        <li><span class="code">HIS 302</span><span>The United States Since 1865</span><span class="term">Fall 2025</span></li>
-        <li><span class="code">ANT 307</span><span>Culture and Communication</span><span class="term">Spring 2025</span></li>
-        <li><span class="code">ANT 305</span><span>Introduction to Expressive Culture</span><span class="term">Fall 2024</span></li>
-        <li><span class="code">HIS 317L</span><span>History of College Football</span><span class="term">Spring 2024</span></li>
-        <li><span class="code">ANT 304</span><span>Introduction to Archaeology: Prehistory</span><span class="term">Fall 2023</span></li>
-        <li><span class="code">ANT 302</span><span>Cultural Anthropology</span><span class="term">Fall 2022, Spring 2023</span></li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3><span class="title">Teaching Assistant</span><span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
-      <p class="meta">Spring 2020</p>
-      <ul class="courses">
-        <li><span class="code">EDUC 602</span><span>Youth Cultural Formations</span><span class="term">Spring 2020</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="train-h">
-    <h2 id="train-h">Relevant Trainings and Certifications</h2>
-    <div class="twocol">
-      <ul>
-      <li>Child Abuse and Mandated Reporter <span class="via">(MandatedReporterCA)</span></li>
-      <li>CPR/AED First Aid, Child &amp; Adult <span class="via">(American Red Cross)</span></li>
-      <li>Restorative Justice</li>
-      <li>Trauma-informed Care</li>
-      </ul>
-      <ul>
-      <li>Child Abuse Risk Management <span class="via">(Praesidium)</span></li>
-      <li>De-escalation and Crisis Intervention</li>
-      <li>Human Subjects Research <span class="via">(CITI)</span></li>
-      <li>Positive Behavioral Intervention and Supports</li>
+        <li>Coached ten students a year through the six-month college application process — deadlines, essays, and school selection</li>
+        <li>Gave students systems to track progress, set goals, and meet deadlines</li>
+        <li>Built relationships through one-on-one tutoring to identify best-fit schools and scholarship opportunities</li>
       </ul>
     </div>
   </section>
 
   <section aria-labelledby="skills-h">
-    <h2 id="skills-h">Relevant Skills</h2>
+    <h2 id="skills-h">Skills</h2>
     <div class="twocol">
       <ul>
-      <li>Lesson Planning</li>
+      <li>Tutoring and Homework Help, K-12</li>
       <li>Reading Instruction and Intervention</li>
-      <li>Critical Literacy Curriculum Development</li>
-      <li>Youth Program Development</li>
+      <li>Lesson Planning</li>
+      <li>Literacy Curriculum Development</li>
+      <li>Social-Emotional Learning Facilitation</li>
+      <li>Afterschool Program Setup and Enrollment</li>
       </ul>
       <ul>
-      <li>Restorative Justice Practices and Community Circle Facilitation</li>
-      <li>Community-Based Participatory Research</li>
-      <li>Qualitative Research and Analysis</li>
+      <li>Behavior Support (PBIS, De-escalation)</li>
+      <li>Conflict Mediation and Resolution</li>
+      <li>Restorative Practices and Community Circle Facilitation</li>
+      <li>Staff and Volunteer Training</li>
+      <li>Family Communication and Parent Engagement</li>
       <li>Grant Writing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="uni-h">
+    <h2 id="uni-h">University Teaching</h2>
+
+    <div class="entry">
+      <h3><span class="title">Teaching Assistant</span><span class="org">University of Texas at Austin</span></h3>
+      <p class="meta">Fall 2022 – Spring 2026</p>
+      <ul>
+        <li>Seven undergraduate courses in anthropology and history, including Cultural Anthropology, Culture and Communication, and Introduction to Expressive Culture</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <h3><span class="title">Assistant Instructor and Teaching Assistant</span><span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
+      <p class="meta">Fall 2019 – Spring 2020</p>
+      <ul>
+        <li>Activism Beyond the Classroom; Youth Cultural Formations</li>
       </ul>
     </div>
   </section>
 
   <footer>
     <span>Ryan A. Haas</span>
-    <span><a href="mailto:RyanHaas@utexas.edu">RyanHaas@utexas.edu</a></span>
+    <span><a href="mailto:ryanahaas@gmail.com">ryanahaas@gmail.com</a></span>
   </footer>
 </main>
 
