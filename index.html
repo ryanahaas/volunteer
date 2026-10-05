@@ -3,294 +3,269 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ryan Haas — volunteer background. Twelve years in afterschool programs and elementary schools, mostly with K–6 kids. Los Angeles.">
+<meta name="description" content="Ryan Haas — volunteer background at a glance. Twelve years in afterschool programs and elementary schools, mostly K–6. Los Angeles.">
 <title>Ryan Haas — volunteer background</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
   :root {
-    --paper: #FBFAF6;
-    --panel: #ECF2EC;
-    --ink: #26282B;
-    --ink-soft: #5E6166;
-    --ink-faint: #8B8E93;
-    --rule: #DFDDD5;
-    --accent: #2E6B50;
-    --focus: #B8862E;
+    --page: #FBFBF9;
+    --panel: #EDF3F3;
+    --ink: #1F2A2E;
+    --ink-soft: #5A666B;
+    --ink-faint: #8A9499;
+    --rule: #E4E8E7;
+    --accent: #1B5E63;
+    --mark: #FFF0B3;
+    --focus: #C27A1A;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #1A1C1E; --panel: #22302A;
-      --ink: #E6E4DD; --ink-soft: #B3B1A9; --ink-faint: #7E7D77;
-      --rule: #34373B; --accent: #8FC8A9; --focus: #E0B45A;
+      --page: #15191B; --panel: #1C2426; --ink: #E7EAE9; --ink-soft: #AEB7BA; --ink-faint: #7C8689;
+      --rule: #2C3335; --accent: #7FC6CB; --mark: #4A4320; --focus: #E8B04B;
     }
   }
   :root[data-theme="dark"] {
-    --paper: #1A1C1E; --panel: #22302A;
-    --ink: #E6E4DD; --ink-soft: #B3B1A9; --ink-faint: #7E7D77;
-    --rule: #34373B; --accent: #8FC8A9; --focus: #E0B45A;
+    --page: #15191B; --panel: #1C2426; --ink: #E7EAE9; --ink-soft: #AEB7BA; --ink-faint: #7C8689;
+    --rule: #2C3335; --accent: #7FC6CB; --mark: #4A4320; --focus: #E8B04B;
   }
 
   * { box-sizing: border-box; }
   body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Karla", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.55;
+    margin: 0; background: var(--page); color: var(--ink);
+    font-family: "Figtree", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem; line-height: 1.5;
   }
   a { color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
   a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { margin: 0; line-height: 1.2; }
 
-  .page { max-width: 44rem; margin: 0 auto; padding: 3.25rem 1.25rem 4rem; }
-
-  /* header */
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-  }
-  header .lede {
-    margin: 0.5rem 0 0;
-    font-size: 1.125rem;
-    color: var(--ink-soft);
-    max-width: 36em;
-  }
-  .contact {
-    margin: 0.9rem 0 0; padding: 0; list-style: none;
-    display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem;
-    font-size: 0.95rem; color: var(--ink-soft);
-  }
-  .contact a { color: var(--ink); }
-
-  /* practical panel */
-  .practical {
-    margin: 2rem 0 0;
-    padding: 1.1rem 1.25rem 1.2rem;
-    background: var(--panel);
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 2rem;
-  }
-  .practical h2 { grid-column: 1 / -1; margin: 0; font-size: 1rem; font-weight: 700; color: var(--accent); }
-  .practical dl { margin: 0; }
-  .practical dt { font-weight: 600; font-size: 0.95rem; }
-  .practical dd { margin: 0.15rem 0 0; color: var(--ink-soft); font-size: 0.95rem; line-height: 1.45; }
-  .practical ul { margin: 0.15rem 0 0; padding: 0; list-style: none; color: var(--ink-soft); font-size: 0.95rem; }
-  .practical li { padding: 0.1rem 0; }
-
-  /* sections */
-  section { padding-top: 2.5rem; }
-  section h2 {
-    margin: 0 0 1.1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--rule);
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.25;
-    color: var(--accent);
-  }
-  section p { margin: 0 0 0.9em; max-width: 38em; }
-
-  .entry { padding: 0.9rem 0; border-top: 1px solid var(--rule); }
-  .entry:first-of-type { border-top: 0; padding-top: 0; }
-  .entry h3 { margin: 0; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
-  .entry h3 .org { font-weight: 400; color: var(--ink-soft); }
-  .entry h3 .org::before { content: ", "; }
-  .entry .meta { margin: 0.1rem 0 0; font-size: 0.9rem; color: var(--ink-faint); }
-  .entry ul { margin: 0.45rem 0 0; padding-left: 1.05rem; max-width: 60ch; }
-  .entry li { margin: 0.2rem 0; }
-  .entry li::marker { color: var(--accent); }
-
-  .helpcols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
-  .helpcols h3 { margin: 0 0 0.4rem; font-size: 1rem; font-weight: 700; color: var(--accent); }
-  .helpcols ul { margin: 0; padding-left: 1.05rem; }
-  .helpcols li { margin: 0.2rem 0; }
-  .helpcols li::marker { color: var(--accent); }
-
-  .background p { color: var(--ink-soft); }
-
-  footer {
-    margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule);
-    font-size: 0.9rem; color: var(--ink-faint);
+  .page {
+    max-width: 66rem; margin: 0 auto; padding: 3rem 1.25rem 4rem;
+    display: grid; grid-template-columns: 17.5rem minmax(0, 1fr); gap: 0 4.5rem; align-items: start;
   }
 
-  @media (max-width: 640px) {
-    .page { padding-top: 2.25rem; }
-    .practical { grid-template-columns: 1fr; }
-    .helpcols { grid-template-columns: 1fr; gap: 1rem 0; }
+  /* ---- side ---- */
+  .side {
+    position: sticky; top: 1.5rem; align-self: start;
+    background: var(--panel); border-radius: 12px;
+    padding: 1.5rem 1.4rem 1.7rem;
   }
+  .side h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.01em; }
+  .side .lede { margin: 0.4rem 0 0; color: var(--ink-soft); font-size: 1rem; line-height: 1.45; }
+  .side h2 { margin: 1.75rem 0 0.35rem; font-size: 0.95rem; font-weight: 700; color: var(--accent); }
+  .side p { margin: 0; font-size: 0.97rem; }
+  .side ul { margin: 0; padding: 0; list-style: none; font-size: 0.97rem; }
+  .side li { padding: 0.12rem 0 0.12rem 1.25rem; position: relative; }
+  .side li::before { content: "✓"; color: var(--accent); font-weight: 700; position: absolute; left: 0; }
+  .side .contact li { padding-left: 0; }
+  .side .contact li::before { content: none; }
+  .side .contact a { color: var(--ink); }
+  .avail { background: var(--mark); padding: 0.1rem 0.3rem; border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+  /* ---- main ---- */
+  .main { padding-top: 0.35rem; }
+  .main > section + section { margin-top: 3.25rem; }
+  .main h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
+  .main p { margin: 0 0 0.8em; max-width: 60ch; }
+
+  .history { margin: 0; }
+  .row {
+    display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 0 1rem;
+    padding: 1rem 0; border-top: 1px solid var(--rule);
+  }
+  .row:first-child { border-top: 0; padding-top: 0; }
+  .row .when { color: var(--ink-faint); font-size: 0.95rem; padding-top: 0.1rem; font-variant-numeric: tabular-nums; }
+  .row h3 { font-size: 1.0625rem; font-weight: 700; }
+  .row .where { font-size: 0.97rem; color: var(--ink-soft); margin: 0.05rem 0 0; }
+  .row .where span { color: var(--ink-faint); }
+  .row p.what { margin: 0.35rem 0 0; color: var(--ink); max-width: 58ch; font-size: 1rem; }
+
+  .help { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; max-width: 46rem; }
+  .help h3 { font-size: 1rem; font-weight: 700; color: var(--accent); margin: 0 0 0.4rem; }
+  .help ul { margin: 0; padding: 0; list-style: none; }
+  .help li { padding: 0.15rem 0 0.15rem 1.1rem; position: relative; }
+  .help li::before { content: ""; position: absolute; left: 0; top: 0.8em; width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--accent); }
+  .edu .row h3 { font-weight: 700; }
+  .edu .row p.what { color: var(--ink-soft); }
+
+  .bg p { color: var(--ink-soft); font-size: 1rem; }
+
+  @media (max-width: 860px) {
+    .page { grid-template-columns: 1fr; gap: 0; padding-top: 2rem; }
+    .side { position: static; margin-bottom: 2.25rem; }
+    .side .sidegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+    .row { grid-template-columns: 1fr; }
+    .row .when { padding-top: 0; }
+    .help { grid-template-columns: 1fr; gap: 1rem 0; }
+  }
+  @media (max-width: 520px) { .side .sidegrid { grid-template-columns: 1fr; } }
   @media print {
-    :root { --paper: #fff; --panel: #f0f0f0; --ink: #111; --ink-soft: #444; --ink-faint: #666; --rule: #ccc; --accent: #2E6B50; }
+    :root { --page: #fff; --ink: #111; --ink-soft: #444; --ink-faint: #666; --rule: #ccc; --accent: #1B5E63; --mark: #eee; --panel: #f2f2f2; }
     @page { margin: 0.6in; }
-    body { font-size: 10pt; line-height: 1.35; }
-    .page { max-width: none; padding: 0; }
-    section { padding-top: 1rem; }
-    .entry { break-inside: avoid; }
+    body { font-size: 10pt; }
+    .page { max-width: none; padding: 0; grid-template-columns: 11rem 1fr; gap: 0 2rem; }
+    .side { position: static; }
+    .row { break-inside: avoid; }
     a { color: inherit; text-decoration: none; }
-    footer { display: none; }
   }
 </style>
 </head>
 <body>
-<main class="page">
-  <header>
+<div class="page">
+  <aside class="side">
     <h1>Ryan Haas</h1>
-    <p class="lede">Youth worker and tutor with twelve years in afterschool programs and elementary schools, mostly with K–6 kids. Now in Los Angeles, looking to volunteer.</p>
-    <ul class="contact">
-      <li>Los Angeles, CA</li>
-      <li><a href="tel:+17147669602">(714) 766-9602</a></li>
-      <li><a href="mailto:ryanahaas@gmail.com">ryanahaas@gmail.com</a></li>
-    </ul>
-  </header>
+    <p class="lede">Twelve years in afterschool programs and elementary schools, mostly with K–6 kids. New to Los Angeles.</p>
 
-  <aside class="practical" aria-labelledby="practical-h">
-    <h2 id="practical-h">The practical stuff</h2>
-    <dl>
-      <dt>When I'm available</dt>
-      <dd>Weekday afternoons, and some weekday evenings.</dd>
-    </dl>
-    <dl>
-      <dt>Clearances and trainings</dt>
-      <dd>
+    <div class="sidegrid">
+      <div>
+        <h2>Available</h2>
+        <p><span class="avail">Weekday afternoons</span>, and some weekday evenings.</p>
+
+        <h2>Clearances and trainings</h2>
         <ul>
-          <li>Live Scan / DOJ fingerprint clearance</li>
-          <li>Mandated reporter (MandatedReporterCA)</li>
-          <li>Child abuse risk management (Praesidium)</li>
-          <li>CPR/AED and First Aid, child &amp; adult (Red Cross)</li>
-          <li>De-escalation and crisis intervention</li>
+          <li>Live Scan / DOJ fingerprints</li>
+          <li>Mandated reporter</li>
+          <li>Child abuse risk management</li>
+          <li>CPR/AED &amp; First Aid</li>
+          <li>De-escalation &amp; crisis intervention</li>
           <li>PBIS, trauma-informed care, restorative justice</li>
         </ul>
-      </dd>
-    </dl>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul class="contact">
+          <li><a href="tel:+17147669602">(714) 766-9602</a></li>
+          <li><a href="mailto:ryanahaas@gmail.com">ryanahaas@gmail.com</a></li>
+          <li>Text or email both work.</li>
+        </ul>
+      </div>
+    </div>
   </aside>
 
-
-  <section aria-labelledby="help-h">
-    <h2 id="help-h">What I can help with</h2>
-    <div class="helpcols">
-      <div>
-        <h3>With kids</h3>
-        <ul>
-          <li>Homework help and tutoring, K–12 (K–6 especially)</li>
-          <li>Reading instruction and intervention</li>
-          <li>One-on-one time with a kid who needs it</li>
-          <li>Running a game, craft, or activity</li>
-          <li>Social-emotional learning and community circles</li>
-          <li>Keeping things calm when they get loud: PBIS, de-escalation, conflict mediation</li>
-        </ul>
+  <main class="main">
+    <section aria-labelledby="hist-h">
+      <h2 id="hist-h">My K–12 background</h2>
+      <div class="history">
+        <div class="row">
+          <div class="when">2023–2026</div>
+          <div>
+            <h3>Volunteer Tutor</h3>
+            <p class="where">VICTORY Tutoring <span>· Austin, TX</span></p>
+            <p class="what">One-on-one tutoring across two full terms. The director asked me to take a look at how the program was going and write up what I found.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2022–2023</div>
+          <div>
+            <h3>Volunteer</h3>
+            <p class="where">Skid Row Learning Center (School on Wheels) <span>· Los Angeles</span></p>
+            <p class="what">Helped reopen and enroll an afterschool site for recently immigrated and unhoused K–8 kids. Tutored and led learning activities.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2021–2022</div>
+          <div>
+            <h3>Afterschool Site Manager</h3>
+            <p class="where">Sunrise of Philadelphia <span>· Philadelphia</span></p>
+            <p class="what">Set up and enrolled a school-based program for 90 K–6 students, and hired and trained a team of seven.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2019–2020</div>
+          <div>
+            <h3>Founding Volunteer</h3>
+            <p class="where">Mighty Writers West Philadelphia <span>· Mantua, Philadelphia</span></p>
+            <p class="what">Helped open a new site in the Mantua Square public housing complex: got to know kids and families, tutored, worked closely with parents.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2016–2017</div>
+          <div>
+            <h3>Student Learning and Support Coordinator</h3>
+            <p class="where">Leonard R. Flynn Elementary <span>· San Francisco Unified</span></p>
+            <p class="what">Stayed alongside a caseload of five students through class, lunch, recess, and tutoring, and coordinated between teachers, afterschool staff, and outside services.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2014–2019</div>
+          <div>
+            <h3>Volunteer, then Afterschool Programs Associate</h3>
+            <p class="where">826 Valencia <span>· San Francisco</span></p>
+            <p class="what">Volunteered three years, then joined staff. Co-led afterschool programming for 80 students and designed a small-group support program for 12 built around reflection and peer support.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2013–2015<br>2021–now</div>
+          <div>
+            <h3>College Counselor</h3>
+            <p class="where">Every Student Matters <span>· San Francisco</span></p>
+            <p class="what">About ten students a year through college applications: deadlines, essays, school choice, scholarships.</p>
+          </div>
+        </div>
       </div>
-      <div>
-        <h3>Behind the scenes</h3>
-        <ul>
-          <li>Lesson planning and literacy curriculum</li>
-          <li>Program design and evaluation</li>
-          <li>Setting up and enrolling a new program</li>
-          <li>Training staff and volunteers</li>
-          <li>Family communication and parent engagement</li>
-          <li>Grant writing</li>
-        </ul>
+    </section>
+
+    <section aria-labelledby="help-h">
+      <h2 id="help-h">What I can help with</h2>
+      <div class="help">
+        <div>
+          <h3>With kids</h3>
+          <ul>
+            <li>Homework help and tutoring, K–12 (K–6 especially)</li>
+            <li>Reading instruction and intervention</li>
+            <li>One-on-one time with a kid who needs it</li>
+            <li>Running a game, craft, or activity</li>
+            <li>Social-emotional learning and community circles</li>
+            <li>Keeping things calm when they get loud: PBIS, de-escalation, conflict mediation</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Behind the scenes</h3>
+          <ul>
+            <li>Lesson planning and literacy curriculum</li>
+            <li>Program design and evaluation</li>
+            <li>Setting up and enrolling a new program</li>
+            <li>Family communication and parent engagement</li>
+            <li>Grant writing</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section aria-labelledby="exp-h">
-    <h2 id="exp-h">My K–12 background</h2>
+    <section aria-labelledby="why-h">
+      <h2 id="why-h">Why I volunteer</h2>
+      <p>I believe more caring cities get built in small, ordinary ways: by showing up, being useful, and letting a community shape me as much as I hope to contribute to it. When I join a program, I start by listening and learning how things already work. I like to move at the speed of trust, letting relationships and the program's own needs shape what I offer, when, and how.</p>
+    </section>
 
-    <div class="entry">
-      <h3>Volunteer Tutor<span class="org">VICTORY Tutoring</span></h3>
-      <p class="meta">2023–2026, Austin, TX</p>
-      <ul>
-        <li>One-on-one tutoring across two full terms</li>
-        <li>At the director's request, took a look at how the program was going and wrote up what I found</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>Volunteer<span class="org">Skid Row Learning Center (School on Wheels)</span></h3>
-      <p class="meta">2022–2023, Los Angeles</p>
-      <ul>
-        <li>Helped reopen and enroll an afterschool site for recently immigrated and unhoused K–8 kids</li>
-        <li>Tutored and led learning activities</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>Afterschool Site Manager<span class="org">Sunrise of Philadelphia</span></h3>
-      <p class="meta">2021–2022, Philadelphia</p>
-      <ul>
-        <li>Set up and enrolled a school-based program for 90 K–6 students</li>
-        <li>Hired and trained a team of seven</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>Founding Volunteer<span class="org">Mighty Writers West Philadelphia</span></h3>
-      <p class="meta">2019–2020, Mantua, Philadelphia</p>
-      <ul>
-        <li>Helped open a new site in the Mantua Square public housing complex, getting to know kids and families</li>
-        <li>Tutored, worked closely with parents, and helped staff shape the program</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>Student Learning and Support Coordinator<span class="org">Leonard R. Flynn Elementary, SFUSD</span></h3>
-      <p class="meta">2016–2017, San Francisco</p>
-      <ul>
-        <li>Stayed alongside a caseload of five students through class, lunch, recess, and tutoring</li>
-        <li>Coordinated between teachers, afterschool staff, and outside services</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>Volunteer, then Afterschool Programs Associate<span class="org">826 Valencia</span></h3>
-      <p class="meta">2014–2019, San Francisco</p>
-      <ul>
-        <li>Volunteered three years, then joined staff. Co-led afterschool programming for 80 students</li>
-        <li>Designed a small-group support program for 12 students built around reflection and peer support</li>
-        <li>Got to know parents, and connected kids with outside resources and activities</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <h3>College Counselor<span class="org">Every Student Matters</span></h3>
-      <p class="meta">2013–2015 and 2021–present, San Francisco</p>
-      <ul>
-        <li>Walk about ten students a year through college applications: deadlines, essays, school choice, scholarships</li>
-      </ul>
-    </div>
-  </section>
-
-  <section aria-labelledby="about-h">
-    <h2 id="about-h">Why I Volunteer</h2>
-    <p>I volunteer because I believe more caring cities get built in small, ordinary ways: by showing up, being useful, and letting a community shape me as much as I hope to contribute to it. When I join a program, I start by listening and learning how things already work, and I like to move at the speed of trust, letting relationships and the program's own needs shape what I offer, when, and how.</p>
-  </section>
-
-  <section aria-labelledby="edu-h">
-    <h2 id="edu-h">Education</h2>
-    <div class="entry">
-      <h3>M.S.Ed., Teaching and Learning<span class="org">University of Pennsylvania, Graduate School of Education</span></h3>
-      <p class="meta">2018</p>
-    </div>
-    <div class="entry">
-      <h3>B.A., Creative Writing<span class="org">The Colorado College</span></h3>
-      <p class="meta">2013</p>
-    </div>
-    <div class="entry">
-      <h3>Ph.D. Candidate, Anthropology<span class="org">University of Texas at Austin</span></h3>
-      <p class="meta">2022–present</p>
-      <ul>
-        <li>Teaching assistant for seven undergraduate courses at UT Austin; previously assistant instructor and TA at Penn GSE</li>
-      </ul>
-    </div>
-  </section>
-
-
-  <footer>Ryan Haas · <a href="mailto:ryanahaas@gmail.com">ryanahaas@gmail.com</a></footer>
-</main>
+    <section class="edu" aria-labelledby="edu-h">
+      <h2 id="edu-h">Education</h2>
+      <div class="history">
+        <div class="row">
+          <div class="when">2018</div>
+          <div>
+            <h3>M.S.Ed., Teaching and Learning</h3>
+            <p class="where">University of Pennsylvania, Graduate School of Education</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2013</div>
+          <div>
+            <h3>B.A., Creative Writing</h3>
+            <p class="where">The Colorado College</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="when">2022–now</div>
+          <div>
+            <h3>Ph.D. Candidate, Anthropology</h3>
+            <p class="where">University of Texas at Austin</p>
+            <p class="what">Teaching assistant for seven undergraduate courses at UT Austin; previously assistant instructor and TA at Penn GSE.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
 </body>
 </html>
